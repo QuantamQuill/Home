@@ -1,0 +1,105 @@
+/* tic-tac-toe.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #00ff00;
+    text-align: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/3px-tile.png');
+    opacity: 0.1;
+    z-index: -1;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.tic-tac-toe {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.cell {
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid #00ff00;
+    padding: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cell:hover {
+    background: rgba(0, 255, 0, 0.2);
+}
+
+#reset {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#reset:hover {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    header h1, .tic-tac-toe h2 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .cell {
+        padding: 15px;
+        font-size: 1.5em;
+    }
+}
